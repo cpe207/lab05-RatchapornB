@@ -1,6 +1,6 @@
 
 interface Hero {
-  items : string;
+  items : string[];
   gold : number;
 }
 
