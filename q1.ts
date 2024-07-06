@@ -5,7 +5,7 @@ interface Hero {
 }
 
 interface Shop {
-  items : string;
+  item : string;
   price : number; 
 }
 
@@ -13,7 +13,9 @@ interface Shop {
 function buyItem(hero, shop) {
   if(hero.gold >= shop.price) {
     hero.gold -= shop.price;
-    hero.items.push(shop.items);
+    hero.items.push(shop.item);
+    return hero;
+  }else{
     return hero;
   }
 }
